@@ -23,8 +23,12 @@ function App() {
     setLoading(false);
   }, []);
 
-  const editItem = (item) => {
-    call("/todo", "PUT", item).then((response) => setItems(response.data));
+  // const editItem = (item) => {
+  //   call("/todo", "PUT", item).then((response) => setItems(response.data));
+  // };
+
+  const editItem = () => {
+    setItems([...items]);
   };
 
   const deleteItem = (item) => {

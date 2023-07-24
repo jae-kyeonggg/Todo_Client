@@ -17,11 +17,12 @@ const Todo = (props) => {
 
   const checkboxEventHandler = (e) => {
     item.done = e.target.checked;
-    editItem(item);
+    editItem();
   };
 
   const editEventHandler = (e) => {
-    setItem({ ...item, title: e.target.value });
+    item.title = e.target.value;
+    editItem();
   };
 
   const turnOffReadOnly = () => {
